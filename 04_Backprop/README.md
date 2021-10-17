@@ -25,8 +25,7 @@ The targets are : t1, t2
 E1 = 1/2 x (t1 - out_o1)^2
 E2= 1/2 x (t2 - out_o2)^2
 
-The total loss : E
-E = E1+E2
+The total loss : E = E1+E2
 
 
 To perform backpropagation we need to know the partial derivatives of the total error with respect to the weights of the network represented by w. The full derivation is shown in the excel sheet. 
