@@ -25,15 +25,19 @@ It can be seen that almost all perform equally well in this simple MNIST dataset
 Misclassified images: 
 
 1. Batch Normalization and L1 loss(lambda = 0.01)
+
 ![Batch Normalization and L1 loss(lambda = 0.01)](./plots/BN_L1_misclassified.png)
 
 2. Batch Normalization
+
 ![Batch Normalization)](./plots/BN_misclassified.png)
 
 3. Layer Normalization
+
 ![Layer Normalization)](./plots/LN_misclassified.png)
 
 4. Group Normalization
+
 ![Group Normalization)](./plots/GN_misclassified.png)
 
 
