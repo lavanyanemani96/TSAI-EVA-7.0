@@ -19,7 +19,7 @@ It was noted that with L1 regression (lambda = 0.01) the test accuracy was very 
 ![Batch Normalization with and without L1](./plots/metrics_L1.png)
 
 It can be seen that almost all perform equally well in this simple MNIST dataset. 
-![Batch Normalization, Layer Normalization & Group Normalization](./plots/metrics_L1.png)
+![Batch Normalization, Layer Normalization & Group Normalization](./plots/metrics.png)
 
 
 Misclassified images: 
