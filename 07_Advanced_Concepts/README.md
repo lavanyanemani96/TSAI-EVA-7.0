@@ -10,14 +10,13 @@ Goals:
 
 Results: 
 1. Total no. of parameters: 86,336
-2. Accuracy achieved: 87.13%
-
+2. Accuracy achieved: 87.12%
 
 Plots: 
 At first we tried to achieve the 85% accuracy goal, this was seen in around ~300 epochs
 ![Accuracy curve 85%](./plots/metrics.png)
 
-Then we trained our network further to reach the 85% accuracy goal, this was seen in the next ~300 epochs. 
+Then we trained our network further to reach the 87% accuracy goal, this was seen in the next ~700 epochs. This is very inefficient and I want to do more experiments on LR schedulers.  
 ![Accuracy curve 87%](./plots/metrics_87.png)
 
 
