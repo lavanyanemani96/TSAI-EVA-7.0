@@ -9,6 +9,7 @@ Goals:
 6. Early submission transforms: RandomCrop(32, padding=4), CutOut(16x16)
 
 Summary of ResNet18:
+'''
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param 
 ================================================================
@@ -71,6 +72,7 @@ Forward/backward pass size (MB): 16.96
 Params size (MB): 42.63
 Estimated Total Size (MB): 59.59
 ----------------------------------------------------------------
+'''
 
 Training: 
 EPOCH: 0
