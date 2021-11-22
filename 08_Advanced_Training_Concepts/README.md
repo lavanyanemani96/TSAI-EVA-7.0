@@ -1,6 +1,6 @@
 # Session 8.0 Advanced Training Concepts
 
-Goals:
+## Goals:
 1. To pull PyTorch_Vision repository [PyTorch_Vision](https://github.com/lavanyanemani96/PyTorch_Vision) that consists of models and other utilities. 
 2. Train ResNet18 for 20 epochs
 3. Show loss and accuracy curves
@@ -8,8 +8,8 @@ Goals:
 5. Show GradCam output on 10 misclassified images
 6. Early submission transforms: RandomCrop(32, padding=4), CutOut(16x16)
 
-Summary of ResNet18:
-'''
+## Summary of ResNet18:
+```
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param 
 ================================================================
@@ -72,9 +72,9 @@ Forward/backward pass size (MB): 16.96
 Params size (MB): 42.63
 Estimated Total Size (MB): 59.59
 ----------------------------------------------------------------
-'''
+```
 
-Training: 
+## Training: 
 EPOCH: 0
   0%|          | 0/391 [00:00<?, ?it/s]/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:481: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
   cpuset_checked))
@@ -179,7 +179,7 @@ Loss=0.1672838032245636 Batch_id=390 Accuracy=92.57: 100%|███████�
 Test set: Average loss: 0.0035, Accuracy: 8712/10000 (87.12%)
 
 
-Plots: 
+## Plots: 
 
 ![Loss and Accuracy plots](./plots/loss_accuracy.png)
 ![Misclassified images](./plots/misclassified.png)
