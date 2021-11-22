@@ -10,7 +10,7 @@ Goals:
 
 Summary of ResNet18:
 ----------------------------------------------------------------
-        Layer (type)               Output Shape         Param #
+        Layer (type)               Output Shape         Param 
 ================================================================
             Conv2d-1           [-1, 64, 36, 36]           1,728
        BatchNorm2d-2           [-1, 64, 36, 36]             128
@@ -76,6 +76,7 @@ Training:
 EPOCH: 0
   0%|          | 0/391 [00:00<?, ?it/s]/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:481: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
   cpuset_checked))
+
 Loss=1.1802575588226318 Batch_id=390 Accuracy=41.11: 100%|██████████| 391/391 [03:03<00:00,  2.13it/s]
 
 Test set: Average loss: 0.0101, Accuracy: 5390/10000 (53.90%)
@@ -177,6 +178,7 @@ Test set: Average loss: 0.0035, Accuracy: 8712/10000 (87.12%)
 
 
 Plots: 
+
 ![Loss and Accuracy plots](./plots/loss_accuracy.png)
 ![Misclassified images](./plots/misclassified.png)
 ![GradCam output of Misclassified images](./plots/misclassified_gradcam.png)
