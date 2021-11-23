@@ -180,12 +180,15 @@ Test set: Average loss: 0.0040, Accuracy: 8565/10000 (85.65%)
 
 ## Plots: 
 
-1. Loss and Accuracy plots: 
+1. Loss and Accuracy plots
+
 ![Loss and Accuracy plots](./plots/loss_accuracy.png)
 
-2. Misclassified images:
+2. Misclassified images
+
 ![Misclassified images](./plots/misclassified.png)
 
 3. GradCam superimposed on misclassified images
+
 ![GradCam output of Misclassified images](./plots/misclassified_gradcam.png)
 
