@@ -327,7 +327,7 @@ Estimated Total Size (MB): 3.74
 ----------------------------------------------------------------
 ```
 
-###VISUALIZING THE STN RESULTS
+Visualizing the STN Results
 ----------------------------------------------
 
 ![image](./plots/STN.png)
