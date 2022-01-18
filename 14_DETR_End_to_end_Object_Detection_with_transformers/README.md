@@ -7,7 +7,7 @@ Code Links
 
 Colab Link : https://colab.research.google.com/drive/17b1P0FRc89B8lhgCr_krE6rTMmLzOhly?usp=sharing
 
-Github Link : 
+Github Link : https://github.com/lavanyanemani96/TSAI-EVA-7.0/tree/master/14_DETR_End_to_end_Object_Detection_with_transformers
 
 
 Explanation
