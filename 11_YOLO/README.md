@@ -2,7 +2,7 @@
 
 ## OpenCV Yolo
 
-Links 
+### Links 
 --------------------------------------
 1. Colab Link : https://colab.research.google.com/drive/12766B8c4ekSZ-OgpPXM7S7-AdIRWkusb?usp=sharing
 2. Data : ./YOLOv3OpenCV/data/
@@ -14,7 +14,7 @@ Links
 
 ## Custom dataset YOLOv3 
 
-Links 
+### Links 
 --------------------------------------
 1. Colab Link Training: https://colab.research.google.com/drive/1xJpM8JdZkUu3LBvzN6qFRD2oBf8BG8X1?usp=sharing
 2. Colab Link for video manipulation with ffmpeg: https://colab.research.google.com/drive/1AmwcWcZehgCIMYxXVoMnHc9Cm1_MX3wF?usp=sharing
@@ -22,25 +22,27 @@ Links
 4. Results : ./YoloV3/data/predictions/ (Contains the image predictions for the 16 annotated images as well as each image from the video and it's corresponding video)
 5. Youtube link to video : https://youtu.be/zoDe54rnXhg
 
-6. Predictions for the 4 classes (Vest, Mask, Hardhat, boots):
+6. Predictions for the 4 classes (Vest, Mask, Hardhat, boots) :
+
 ![annotated_images_vest](./YoloV3/data/predictions/annotated_test/eva7_ln_v23.jpg)
 ![annotated_images_mask](./YoloV3/data/predictions/annotated_test/eva7_ln_m23.jpg)
 ![annotated_images_hardhat](./YoloV3/data/predictions/annotated_test/eva7_ln_h25.jpg)
 ![annotated_images_boots](./YoloV3/data/predictions/annotated_test/eva7_ln_b22.jpg)
 
-7. Predictions for the images from the video: 
+7. Predictions for the images from the video : 
+
 ![1](./YoloV3/data/predictions/video/image-001.jpg)
 ![2](./YoloV3/data/predictions/video/image-531.jpg)
 ![3](./YoloV3/data/predictions/video/image-723.jpg)
 ![4](./YoloV3/data/predictions/video/image-987.jpg)
 
 
-Contributors
+## Contributors
 -------------------------
 Lavanya Nemani lavanyanemani96@gmail.com
 
 
-Training Logs 
+## Training Logs 
 ---------------------------------------
 Model Summary: 225 layers, 6.25895e+07 parameters, 6.25895e+07 gradients
 Caching labels (2943 found, 131 missing, 38 empty, 0 duplicate, for 3112 images): 100% 3112/3112 [18:32<00:00,  2.80it/s]
