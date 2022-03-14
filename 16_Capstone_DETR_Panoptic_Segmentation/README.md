@@ -35,12 +35,12 @@ Plan for training:
 The training for this is split into two parts. 
 
 1. In the first part, the DETR is trained to recognize the new type of objects and emit BB, like usual. Since the final ground truth is specified as segmentation masks, we will use cv2.getRectange(contour) API to convert that to bounding box ground truth
-  A. If the classid for stuff and concrete defect are overlapping with default COCO dataset, we will need to assign new ones. Then finetune the backbone as indicated [here](https://wandb.ai/veri/detr/reports/DETR-Panoptic-segmentation-on-Cityscapes-dataset--Vmlldzo2ODg3NjE) in Step 4.1
-  B. Once above model detects BB for concrete defects, we proceed to next training
+  - If the classid for stuff and concrete defect are overlapping with default COCO dataset, we will need to assign new ones. Then finetune the backbone as indicated [here](https://wandb.ai/veri/detr/reports/DETR-Panoptic-segmentation-on-Cityscapes-dataset--Vmlldzo2ODg3NjE) in Step 4.1
+  - Once above model detects BB for concrete defects, we proceed to next training
 2. The second part of the training, the DETR weights are frozen and we train the segmentation model for 25 epochs. 
-  A. Queries corresponding to BB filtered with a high threshold (e.g. 0.85) from Step 1. are part of input to this Step 2.
-  B. The fpn-style cnn is trained to convert DETR object queries + Resnet-50 encodings to emit N channel output panoptic masks - one channel for each object query. 
-  C. Essentially we are doing the second arm of the UNet with ground truth being N channel masks, and loss function to be focal or dice loss. We may use dice or focal (TBD), focal helps with focussing the loss on hard to classify pixels
+  - Queries corresponding to BB filtered with a high threshold (e.g. 0.85) from Step 1. are part of input to this Step 2.
+  - The fpn-style cnn is trained to convert DETR object queries + Resnet-50 encodings to emit N channel output panoptic masks - one channel for each object query. 
+  - Essentially we are doing the second arm of the UNet with ground truth being N channel masks, and loss function to be focal or dice loss. We may use dice or focal (TBD), focal helps with focussing the loss on hard to classify pixels
 
 
 Contributors
