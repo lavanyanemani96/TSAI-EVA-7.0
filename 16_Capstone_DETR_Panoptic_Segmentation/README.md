@@ -5,23 +5,23 @@
 
 - We take the encoded image (d x H/32 x W/32) and send it to Multi-Head Attention (FROM WHERE DO WE TAKE THIS ENCODED IMAGE?)
 
-The encoded image is the output of DETR’s encoder. 
- 
-Image (x<sub>img</sub> ∈ R<sup>3 x H x W</sup>) → 
-Resnet50 penultimate layer activation (f ∈ R<sup>d' x H/32 x W/32</sup> , d'=2048) →
-1x1 convolution (f ∈ R<sup>d x H/32 x W/32</sup>, d=transformer inner dimension) + pos embeddings →
-Transformer encoder  (f ∈ R<sup>d x H/32 x W/32</sup>, d=transformer inner dimension)
-		
-The input to the ResNet50 is an image (ximg ∈ R3 x H x W) which generates a lower resolution activation map (f ∈ R<sup>d' x H/32 x W/32</sup>) as the forward pass from the ResNet50 with fixed weights by discarding the last classification layer. This activation map along with sinusoidal positional encodings becomes the input to the DETR’s encoder. The output of the encoder is concatenated to form the image (e<sub>img</sub> ∈ R<sup>d x H/32 x W/32</sup>) which is sent to the Multi-Head Attention block.
+  The encoded image is the output of DETR’s encoder. 
+
+  Image (x<sub>img</sub> ∈ R<sup>3 x H x W</sup>) → 
+  Resnet50 penultimate layer activation (f ∈ R<sup>d' x H/32 x W/32</sup> , d'=2048) →
+  1x1 convolution (f ∈ R<sup>d x H/32 x W/32</sup>, d=transformer inner dimension) + pos embeddings →
+  Transformer encoder  (f ∈ R<sup>d x H/32 x W/32</sup>, d=transformer inner dimension)
+
+  The input to the ResNet50 is an image (ximg ∈ R3 x H x W) which generates a lower resolution activation map (f ∈ R<sup>d' x H/32 x W/32</sup>) as the forward pass from the ResNet50 with fixed weights by discarding the last classification layer. This activation map along with sinusoidal positional encodings becomes the input to the DETR’s encoder. The output of the encoder is concatenated to form the image (e<sub>img</sub> ∈ R<sup>d x H/32 x W/32</sup>) which is sent to the Multi-Head Attention block.
 
 
 - We also send dxN Box embeddings to the Multi-Head Attention. We do something here to generate NxMxH/32xW/32 maps. (WHAT DO WE DO HERE?)
 
-The output of the DETR’s decoder is bbox embeddings (d x N), where N = 100 is the fixed number of total instances of objects of all classes. For object detection where bbox predictions are required along with class labels, these embeddings go through FFN for final detection predictions. But for the case of panoptic segmentations, M multi-heads calculate attention scores for each N object embedding with the output of the encoder (e<sub>img</sub> ∈ R<sup>d x H/32 x W/32</sup>) described in the above answer.
+  The output of the DETR’s decoder is bbox embeddings (d x N), where N = 100 is the fixed number of total instances of objects of all classes. For object detection where bbox predictions are required along with class labels, these embeddings go through FFN for final detection predictions. But for the case of panoptic segmentations, M multi-heads calculate attention scores for each N object embedding with the output of the encoder (e<sub>img</sub> ∈ R<sup>d x H/32 x W/32</sup>) described in the above answer.
 
 - Then we concatenate these maps with Res5 Block (WHERE IS THIS COMING FROM?)
 
-Res5 block comes from the Resnet50 encoder’s Conv5 block which is 7x7x2048 i.e. input dimensions have been reduced by 32x. This matches the encoder output shape and concatenation can be performed.
+  Res5 block comes from the Resnet50 encoder’s Conv5 block which is 7x7x2048 i.e. input dimensions have been reduced by 32x. This matches the encoder output shape and concatenation can be performed.
 
 - Then we perform the above steps (EXPLAIN THESE STEPS)
 
