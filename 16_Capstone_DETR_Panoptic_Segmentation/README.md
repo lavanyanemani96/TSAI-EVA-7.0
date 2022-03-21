@@ -58,11 +58,13 @@ There are now four classes = ['N/A', 'rebar', 'crack', 'spall'] in our concrete 
 With the ![notebook](./bbox_detection/finetune-detr.ipynb) and setting the first_class_index = 1, and the total number of classes = 4, we train our network for 100 epochs. The results are as follows: 
 
 1. Metrics 
+
 ![Total loss and mAP](./bbox_detection/bbox_results/metrics/loss_map.png)
 ![CE, BBOX, GIOU](./bbox_detection/bbox_results/metrics/loss_ce_loss_bbox_loss_giou.png)
 ![Class, Cardinality](./bbox_detection/bbox_results/metrics/loss_class_loss_cardinality.png)
 
 2. Prediction examples 
+
 ![Threshold = 0.9](./bbox_detection/bbox_results/predictions/pred_00333_t_0.9.png)
 ![Threshold = 0.45](./bbox_detection/bbox_results/predictions/pred_00333_t_0.45.png)
 
