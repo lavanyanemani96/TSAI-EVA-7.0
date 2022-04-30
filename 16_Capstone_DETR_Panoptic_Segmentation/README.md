@@ -66,7 +66,6 @@ With the ![notebook](./bbox_detection/finetune-detr.ipynb) and setting the first
 2. Prediction examples 
 
 ![Threshold = 0.9](./bbox_detection/bbox_results/predictions/pred_00333_t_0.9.png)
-![Threshold = 0.45](./bbox_detection/bbox_results/predictions/pred_00333_t_0.45.png)
 
 3. The training logs: 
 Found in ./bbox_detection/bbox_results/Training_logs_Phase_2.txt
@@ -111,6 +110,7 @@ For bbox detections (for both things and stuff class together):
 ![Loss and mAP](./panoptic_segmentation/panoptic_results/metrics/loss_mAP_bbox_things_stuff.png)
 
 For segmentation (for both things and stuff class together) we show the PQ metrics: 
+
 ![PQ test](./panoptic_segmentation/panoptic_results/metrics/test_PQ_all.png)
 
 2. Prediction Examples 
@@ -119,6 +119,7 @@ We re-trained the bbox with the things and stuff classes together:
 ![Bbox Prediction](./panoptic_segmentation/panoptic_results/predictions/pred_th_st_bbox.png)
 
 Panoptic segmentation output: (Original, Ground Truth Mask, Predicted Mask) 
+
 ![Original](./panoptic_segmentation/panoptic_results/predictions/original_panoptic.png) ![Ground Truth Mask](./panoptic_segmentation/panoptic_results/predictions/000132spall.jpg) ![Predicted Mask](./panoptic_segmentation/panoptic_results/predictions/pred_panoptic.png)
 
 
